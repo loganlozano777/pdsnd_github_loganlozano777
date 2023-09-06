@@ -15,3 +15,5 @@ Include the files used
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
 
+### Section II: Improve Documentation (Round 1) 👍
+Was trying to add emojis to first round off editing README file

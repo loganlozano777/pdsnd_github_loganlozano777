@@ -17,3 +17,6 @@ It's important to give proper credit. Add links to any repo that inspired you or
 
 ### Section II: Improve Documentation (Round 1) 👍
 Was trying to add emojis to first round off editing README file
+
+### Section II: Improve Documentation (Round 2) 🥈
+In **bikeshare** file, edited template code by modifying functions like get_filters()

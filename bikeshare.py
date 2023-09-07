@@ -17,20 +17,17 @@ def get_filters(): #when it says get_filters, it means the parameters for the lo
     """
     print(('/'*40),'\n' + ('/'*40))
     print('Hello! Let\'s explore some US bikeshare data!')
-
     cities = ['chicago', 'new york city', 'washington']
     months = [ 'january', 'february', 'march', 'april', 'may', 'june','all']
     days_of_week = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
-
     # TO DO: get user input for city (chicago, new york city, washington). 
     global city
     city = input('Enter city: ').lower()
-    # TO DO: get user input for month (all, january, february, ... , june)
+        # TO DO: get user input for month (all, january, february, ... , june)
     month = input('Enter month (january - june): ').lower()
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+        # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day = input('Enter the day of the week: ').lower()
-
-    #HINT: Use a while loop to handle invalid inputs
+        #HINT: Use a while loop to handle invalid inputs
     while (city not in cities) or (month not in months) or (day not in days_of_week):
         if (city not in cities):
             print('\n', 'Please enter the correct city. ', sep = '')
@@ -42,8 +39,8 @@ def get_filters(): #when it says get_filters, it means the parameters for the lo
             print('\n', 'Please enter the correct day of the week. ', sep = '')
             day = input('Enter the day of the week: ').lower()
 
-    print(('/'*40) + '\n' + ('/'*40) + '\n')
 
+    print(('/'*40) + '\n' + ('/'*40) + '\n')
     return city, month, day
 
 
@@ -143,12 +140,13 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # TO DO: display total travel time and display mean travel time
+    # TO DO: display total travel time
     total_travel_time = df['Trip Duration'].sum()
-    mean_travel_time = df['Trip Duration'].mean()
-
-    print('Total trip duration: {}'.format(total_travel_time))
-    print('Mean trip duration: {}'.format(mean_travel_time))
+    print('This is the total trip duration of the stations in the city of {}: {}'.format(city, total_travel_time))  
+    
+    # TO DO: display mean travel time
+    total_travel_time = df['Trip Duration'].mean()
+    print('This is the mean trip duration of the stations in the city of {}: {}'.format(city, total_travel_time))  
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -191,7 +189,7 @@ def user_stats(df):
         most_common_birth_year = df['Birth Year'].mode()[0]
         print('This is the most common birth year: {}'.format(most_common_birth_year))
     
-def raw_data(df, batch_size=5):
+def raw_data(df):
     """ 
     Asks if user wants to see the raw data. 
     
@@ -201,10 +199,9 @@ def raw_data(df, batch_size=5):
     while True:
         if user_input.lower() != 'yes':
             break
-        for key, five_rows in df.groupby(np.arange(len(df)) // batch_size): #reading through pandas and numpy online documentation helped me to piece together the groupby and arange methods 
+        for key, five_rows in df.groupby(np.arange(len(df)) // 5): #reading through pandas and numpy online documentation helped me to piece together the groupby and arange methods 
             print(five_rows)
-            user_input = input('Would you like to see {} more rows?\n'.format(batch_size))
-
+            user_input = input('Would you like to see 5 more rows?\n')
             if user_input.lower() == 'yes':
                 continue
             else:

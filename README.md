@@ -15,6 +15,11 @@ Include the files used
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
 
-trying to make split branches in git log
+### Section II: Improve Documentation (Round 1) 🥇
+Was trying to add emojis to first round off editing README file
 
-modified bikeshare.py, refactored raw_data() function
+### Section II: Improve Documentation (Round 2) 🥈
+In **bikeshare** file, edited template code by modifying functions like get_filters()
+
+### Section II: Improve Documentation (Round 3) 🥉
+In **bikeshare** file, created my own function raw_data() which asks the user if they want to see the data 5 rows at a time

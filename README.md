@@ -15,6 +15,7 @@ Include the files used
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
 
+<<<<<<< HEAD
 ### Section II: Improve Documentation (Round 1) 🥇
 Was trying to add emojis to first round off editing README file
 
@@ -23,3 +24,7 @@ In **bikeshare** file, edited template code by modifying functions like get_filt
 
 ### Section II: Improve Documentation (Round 3) 🥉
 In **bikeshare** file, created my own function raw_data() which asks the user if they want to see the data 5 rows at a time
+=======
+### Section II: Improve Documentation (Round 1) 👍
+Was trying to add emojis to first round off editing README file
+>>>>>>> 9e233e7 (Downloaded emojisense in VScode)

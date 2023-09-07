@@ -204,7 +204,7 @@ def raw_data(df, batch_size=5):
             break
         for key, five_rows in df.groupby(np.arange(len(df)) // batch_size): #reading through pandas and numpy online documentation helped me to piece together the groupby and arange methods 
             print(five_rows)
-            user_input = input('Would you like to see 5 more rows?\n')
+            user_input = input('Would you like to see {} more rows?\n'.format(batch_size))
 
             if user_input.lower() == 'yes':
                 continue

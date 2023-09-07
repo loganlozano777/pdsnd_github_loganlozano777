@@ -16,3 +16,5 @@ Include the files used
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
 
 trying to make split branches in git log
+
+modified bikeshare.py, refactored raw_data() function
